@@ -148,11 +148,11 @@ function displayFileExplorer($currentDir, $baseDir)
 
         foreach ($listing['directories'] as $directory) {
             $dirPath = $currentDir . '/' . $directory;
-            echo '<li class="list-group-item" oncontextmenu="showContextMenu(event, \'' . $dirPath . '\')"><a href="?dir=' . urlencode($dirPath) . '">' . htmlspecialchars($directory) . '</a></li>';
+            echo '<li class="list-group-item" oncontextmenu="showContextMenu(event, \'' . $dirPath . '\')">  &#128193; <a href="?dir=' . urlencode($dirPath) . '">' . htmlspecialchars($directory) . '</a></li>';
         }
 
         foreach ($listing['files'] as $file) {
-            echo '<li class="list-group-item" oncontextmenu="showContextMenu(event, \'' . $file . '\')">' . htmlspecialchars($file) . '</li>';
+            echo '<li class="list-group-item" oncontextmenu="showContextMenu(event, \'' . $file . '\')"> &#128462; ' . htmlspecialchars($file) . '</li>';
         }
 
         $CONTEXT_DOCUMENT_ROOT = $_SERVER["CONTEXT_DOCUMENT_ROOT"];
